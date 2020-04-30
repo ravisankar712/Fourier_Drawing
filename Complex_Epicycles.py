@@ -2,7 +2,7 @@ import numpy as np
 from scipy.integrate import simps
 from p5 import *
 
-#this is used only because the p5 draw recogonizes only OOP
+#A stupid thing to do!! This is used only because the p5 draw recogonizes only OOP
 class Clock():
 
     def __init__(self, t0):
