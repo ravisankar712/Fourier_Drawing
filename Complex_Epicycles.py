@@ -76,10 +76,11 @@ t = Clock(0)
 #geting the data
 data = np.loadtxt('data.txt')
 scale = 100
+Num_terms = 30
 xs = np.linspace(-np.pi, np.pi, len(data))
 #making the data into a complex signal
 signal = np.array([data[i][0] + data[i][1]*1j for i in range(len(data))]) * scale
-Fourier_sig = complex_FT(signal, xs, 80)
+Fourier_sig = complex_FT(signal, xs, Num_terms)
 terms = AFP(Fourier_sig, xs)
 terms = sorted(terms, key=lambda x:x[0], reverse = True)
 path = []
